@@ -64,7 +64,6 @@ const filterSculptures = (props) => {
 }
 
 
-
 export async function getServerSideProps(context) {
   let headers = { Authorization: "Bearer 43fb508bc2e543f4e90c4d6b8b85a1400e0240d3651e42d39a8364cc81d0f657de0fc4b4be433f58662e1b6f164984d78955d6b4a154c44e70f7f0de61bfe0a02ee85b050b325d9132b9a076334f9072a9d368131b24114529248da78c57d3ef40484a0f5555abc330a7c80ebb7ec9fbc5b86007d94e3c5e4fbf314b0566bbec" }
   let a = await fetch("http://localhost:1337/api/products?filters[category]=Sculptures", { headers: headers })
