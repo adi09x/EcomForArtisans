@@ -24,7 +24,7 @@ import React from 'react'
 
 // }
 
-const Products = (props) => {
+const filterPainting = (props) => {
 
 
   return (
@@ -34,15 +34,7 @@ const Products = (props) => {
           <div className="flex flex-wrap w-full md:mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Product List - E-comm for Artisians</h1>
-              <h1 className="sm:text-1.5xl text-1xl font-medium title-font mb-2 ">Filters</h1>
-             
-              <Link href={`/filterPages/filterPainting`}><button className="my-2 mx-3 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Buy only Painting</button></Link>
-              <Link href={`/filterPages/filterSculptures`}><button className="my-2 mx-3 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Buy only Sculptures</button></Link>
-              <Link href={`/filterPages/filterPhotography`}><button className="my-2 mx-3 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Buy only Photography</button></Link>
-              <Link href={`/filterPages/filterDye`}><button className="my-2 mx-3 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Buy only Dye-arts</button></Link>
-              <div className="h-1 w-20 bg-indigo-500 rounded">
-                
-              </div>
+              <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
           </div>
           <div className="flex flex-wrap -m-4">
@@ -75,7 +67,7 @@ const Products = (props) => {
 
 export async function getServerSideProps(context) {
   let headers = { Authorization: "Bearer 43fb508bc2e543f4e90c4d6b8b85a1400e0240d3651e42d39a8364cc81d0f657de0fc4b4be433f58662e1b6f164984d78955d6b4a154c44e70f7f0de61bfe0a02ee85b050b325d9132b9a076334f9072a9d368131b24114529248da78c57d3ef40484a0f5555abc330a7c80ebb7ec9fbc5b86007d94e3c5e4fbf314b0566bbec" }
-  let a = await fetch("http://localhost:1337/api/products?populate=*", { headers: headers })
+  let a = await fetch("http://localhost:1337/api/products?filters[category]=Painting", { headers: headers })
 
   let products = await a.json()
   console.log(products);
@@ -88,4 +80,4 @@ export async function getServerSideProps(context) {
 
 
 
-export default Products
+export default filterPainting
