@@ -14,37 +14,50 @@ const artistHireProfile = () => {
                     </h1>
                     <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
                     <div class="flex justify-center">
-                        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Products</button>
+                        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Buy Products</button>
                         <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Hire Me</button>
                     </div>
+
+                    <div class="flex items-bottom-right my-5 flex-wrap ">
+                        <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href='#section'>Artist's Gallery
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" /></svg>
+                        </a>
+                    </div>
+
+
+
                 </div>
             </div>
 
-            <div class="flex flex-wrap md:-m-2 -m-1">
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-1/2">
+
+            <h1 className="text-2xl font-medium title-font mb-4 mx-4 text-gray-900">Gallery-</h1>
+            <div className="flex flex-wrap md:-m-2 -m-1">
+                <div className="flex flex-wrap w-1/2">
+                    <div className="md:p-2 p-1 w-1/2">
                         <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300" />
                     </div>
-                    <div class="md:p-2 p-1 w-1/2">
+                    <div className="md:p-2 p-1 w-1/2">
                         <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301" />
                     </div>
-                    <div class="md:p-2 p-1 w-full">
+                    <div className="md:p-2 p-1 w-full">
                         <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360" />
                     </div>
                 </div>
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-full">
+                <div className="flex flex-wrap w-1/2">
+                    <div className="md:p-2 p-1 w-full">
                         <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361" />
                     </div>
-                    <div class="md:p-2 p-1 w-1/2">
+                    <div className="md:p-2 p-1 w-1/2">
                         <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302" />
                     </div>
-                    <div class="md:p-2 p-1 w-1/2">
+                    <div className="md:p-2 p-1 w-1/2">
                         <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303" />
                     </div>
                 </div>
             </div>
         </section>
+
+
     )
 }
 
