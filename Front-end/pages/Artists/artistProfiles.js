@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 const artistProfiles = (props) => {
 
@@ -31,7 +33,8 @@ const artistProfiles = (props) => {
                     <h2 class="text-gray-900 title-font font-medium">{item.attributes.Name}</h2>
                     <p class="text-gray-500">{item.attributes.Expertise}</p>
                   </div>
-                  <button className="my-2 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Hire</button>
+                  <Link href={`artistHireProfile`}>
+                  <button className="my-2 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Hire</button></Link>
                 </div>
               </div>
 
