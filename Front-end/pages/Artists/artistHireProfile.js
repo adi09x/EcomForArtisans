@@ -61,4 +61,6 @@ const artistHireProfile = () => {
     )
 }
 
+
+
 export default artistHireProfile
