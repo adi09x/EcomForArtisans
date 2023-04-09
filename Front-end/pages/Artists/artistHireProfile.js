@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const artistHireProfile = () => {
     return (
@@ -13,10 +14,33 @@ const artistHireProfile = () => {
                         <br class="hidden lg:inline-block" />Description
                     </h1>
                     <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+
+                    <div className='flex flex-row'>
+                        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+                            <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+                            <p class="leading-relaxed">Products Purchased</p>
+                        </div>
+                        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+                            <h2 class="title-font font-medium text-3xl text-gray-900">1.8K</h2>
+                            <p class="leading-relaxed">Reviews</p>
+                        </div>
+                        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+                            <h2 class="title-font font-medium text-3xl text-gray-900">35</h2>
+                            <p class="leading-relaxed">No of times Hired</p>
+                        </div>
+                    </div>
+
                     <div class="flex justify-center">
-                        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Buy Products</button>
+                        <Link href={`artistWiseProducts`}><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Buy Products</button></Link>
                         <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Hire Me</button>
                     </div>
+
+
+
+                 
+
+
+
 
                     <div class="flex items-bottom-right my-5 flex-wrap ">
                         <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href='#section'>Artist's Gallery
@@ -28,6 +52,10 @@ const artistHireProfile = () => {
 
                 </div>
             </div>
+
+            ...
+
+
 
 
             <h1 className="text-2xl font-medium title-font mb-4 mx-4 text-gray-900">Gallery-</h1>
@@ -55,7 +83,7 @@ const artistHireProfile = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
 
 
     )
