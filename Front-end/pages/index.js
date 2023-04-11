@@ -7,6 +7,8 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
+
+    
     <div className='container mx-auto px-4 object-scale-down'>
       <img className='  object-scale-down object-scale-down  w-[100vw] h-[50vh]' src="bg1.jpg" alt="" />
       <section className="text-gray-600 body-font">
