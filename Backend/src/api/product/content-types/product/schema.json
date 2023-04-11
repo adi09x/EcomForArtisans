@@ -51,6 +51,12 @@
     },
     "imgurl": {
       "type": "text"
+    },
+    "artist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::artist.artist",
+      "inversedBy": "products"
     }
   }
 }
