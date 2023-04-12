@@ -84,7 +84,7 @@ const artistHireProfile = () => {
                 </div>
             </div>
         </section >
-
+    
 
     )
 }
