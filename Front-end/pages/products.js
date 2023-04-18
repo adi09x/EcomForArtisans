@@ -74,7 +74,7 @@ const Products = (props) => {
 
 
 export async function getServerSideProps(context) {
-  let headers = { Authorization: "Bearer 43fb508bc2e543f4e90c4d6b8b85a1400e0240d3651e42d39a8364cc81d0f657de0fc4b4be433f58662e1b6f164984d78955d6b4a154c44e70f7f0de61bfe0a02ee85b050b325d9132b9a076334f9072a9d368131b24114529248da78c57d3ef40484a0f5555abc330a7c80ebb7ec9fbc5b86007d94e3c5e4fbf314b0566bbec" }
+  let headers = { Authorization: "Bearer 2ed747984fdbb390d1f742624785fb379cdd97ca844b5746f8760c4a8ce187a8f653a8eef3a645bb44fb45a521030486dc985c0e9410bd179e83041b6c98f6f07bed7ac2465796c061647d385ea7dfa823a73f80ad4285373f891f96987a1b852094800fc01d618f18f6ab2f9fb1493abc7f06fb73c273ba5c97cae70697e02e" }
   let a = await fetch("http://localhost:1337/api/products?populate=*", { headers: headers })
 
   let products = await a.json()
@@ -84,9 +84,5 @@ export async function getServerSideProps(context) {
   }
 
 }
-
-
-
-
 
 export default Products
