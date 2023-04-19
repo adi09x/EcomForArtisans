@@ -4,7 +4,8 @@
   "info": {
     "singularName": "artist",
     "pluralName": "artists",
-    "displayName": "Artist"
+    "displayName": "Artist",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,11 @@
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "artist"
+    },
+    "Slug": {
+      "type": "uid",
+      "default": "Artist-0",
+      "required": true
     }
   }
 }
