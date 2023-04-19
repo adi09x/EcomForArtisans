@@ -21,7 +21,7 @@ const artistProfiles = (props) => {
 
 
           {props.artists.data.map((item) => {
-            console.log(item);
+            console.log(item.id);
 
             return (
 
@@ -33,11 +33,11 @@ const artistProfiles = (props) => {
                     <h2 class="text-gray-900 title-font font-medium">{item.attributes.Name}</h2>
                     <p class="text-gray-500">{item.attributes.Expertise}</p>
                   </div>
-                  <Link href={`artistHireProfile`}>
+                  <Link href={`/Artists/products/${item.id}`}>
                     <button className="my-2 text-white bg-indigo-500 border-0 py-1 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm">Hire</button></Link>
                 </div>
               </div>
-                    // ${item.attributes.slug}
+              // ${item.attributes.slug}
             )
           })}
 
