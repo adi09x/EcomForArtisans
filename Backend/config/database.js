@@ -82,7 +82,7 @@
 //       // database: env("DATABASE_NAME", "neondb"),
 //       // user: env("DATABASE_USERNAME", "br-proud-lab-876536"),
 //       // password: env("DATABASE_PASSWORD", "jk8iSZ4cegzh"),
-     
+
 //       schema: env("DATABASE_SCHEMA", "public"), // Not required,
 //       ssl: {
 //         rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
@@ -94,16 +94,12 @@
 
 // postgres://artist_user:WwD9htPqWhAEfwFt6pVWJuZhof95EsOv@dpg-cgvqurqut4mc4ka58lcg-a.singapore-postgres.render.com/artist
 
-
-
-
-// new database config for hosting 
-
+// new database config for hosting
 
 const path = require("path");
 
 module.exports = ({ env }) => {
-  const client = env("DATABASE_CLIENT","postgres");
+  const client = env("DATABASE_CLIENT", "postgres");
 
   const connections = {
     // mysql: {
@@ -159,13 +155,13 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: env("DATABASE_URL"),
         host: env(
-          "DATABASE_HOST",
-          "postgres://WrongMice:jk8iSZ4cegzh@ep-curly-smoke-447791.ap-southeast-1.aws.neon.tech/EcomForArtisans"
+          "DATABASE_HOST"
+          // "postgres://WrongMice:jk8iSZ4cegzh@ep-curly-smoke-447791.ap-southeast-1.aws.neon.tech/EcomForArtisans"
         ),
         port: env.int("DATABASE_PORT", 5432),
-        database: env("DATABASE_NAME", "EcomForArtisans"),
-        user: env("DATABASE_USERNAME", "WrongMice"),
-        password: env("DATABASE_PASSWORD", "jk8iSZ4cegzh"),
+        database: env("DATABASE_NAME", ""), //EcomForArtisans
+        user: env("DATABASE_USERNAME", ""), //WrongMice
+        password: env("DATABASE_PASSWORD"), //"jk8iSZ4cegzh"
         ssl: env.bool("DATABASE_SSL", false) && {
           key: env("DATABASE_SSL_KEY", undefined),
           cert: env("DATABASE_SSL_CERT", undefined),
