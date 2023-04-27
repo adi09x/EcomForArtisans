@@ -86,7 +86,7 @@ export async function getServerSideProps(context) {
   };
 
   const a = await fetch(
-    `http://localhost:1337/api/artists?filters[id][$eq]=${context.query.id}&populate=*`,
+    `https://ecomforartisans.onrender.com/api/artists?filters[id][$eq]=${context.query.id}&populate=*`,
     { headers: headers }
   );
 

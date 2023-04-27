@@ -67,7 +67,7 @@ const filterPainting = (props) => {
 
 export async function getServerSideProps(context) {
   let headers = { Authorization: "Bearer 461ec980c7a2a99e72a6cf55ba28261c51edad99a73d4ad590ec15a09f6a40f05629d7ab6f016ef91d690953e2017147364f70e1b102f47cbfdfa434864bc96eb0bd2d781cd84fe7a376c6225e6227b21cc7ceb19b7a73cf92b49297d37943c4af2fe5b6517c2cae5cf16fef4109e84afcab1973ff466b6e2ffd2f8ae496f9d3" }
-  let a = await fetch("http://localhost:1337/api/products?filters[category]=Painting", { headers: headers })
+  let a = await fetch("https://ecomforartisans.onrender.com/api/products?filters[category]=Painting", { headers: headers })
 
   let products = await a.json()
   console.log(products);
