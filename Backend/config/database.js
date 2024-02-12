@@ -11,13 +11,13 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: env("DATABASE_URL"),
         host: env(
-          "DATABASE_HOST"
-          // "postgres://WrongMice:jk8iSZ4cegzh@ep-curly-smoke-447791.ap-southeast-1.aws.neon.tech/EcomForArtisans"
+          "DATABASE_HOST",
+          "postgres://WrongMice:jk8iSZ4cegzh@ep-curly-smoke-447791.ap-southeast-1.aws.neon.tech/EcomForArtisans"
         ),
         port: env.int("DATABASE_PORT", 5432),
-        database: env("DATABASE_NAME", ""), //EcomForArtisans
-        user: env("DATABASE_USERNAME", ""), //WrongMice
-        password: env("DATABASE_PASSWORD"), //"jk8iSZ4cegzh"
+        database: env("DATABASE_NAME", "EcomForArtisans"), //EcomForArtisans
+        user: env("DATABASE_USERNAME", "WrongMice"), //WrongMice
+        password: env("DATABASE_PASSWORD","jk8iSZ4cegzh"), //"jk8iSZ4cegzh"
         ssl: env.bool("DATABASE_SSL", false) && {
           key: env("DATABASE_SSL_KEY", undefined),
           cert: env("DATABASE_SSL_CERT", undefined),
